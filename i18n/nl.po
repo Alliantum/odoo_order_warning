@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-14 09:58+0000\n"
-"PO-Revision-Date: 2021-04-14 09:58+0000\n"
+"POT-Creation-Date: 2021-04-14 09:57+0000\n"
+"PO-Revision-Date: 2021-04-14 09:57+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,37 +18,37 @@ msgstr ""
 #. module: odoo_order_warning
 #: model_terms:ir.ui.view,arch_db:odoo_order_warning.order_warning_state_view
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "Annuleren"
 
 #. module: odoo_order_warning
 #: model_terms:ir.ui.view,arch_db:odoo_order_warning.order_warning_counter_view
 msgid "Check Warning State"
-msgstr "Warnstatus Prüfen"
+msgstr "Waarschuwingsstatus controleren"
 
 #. module: odoo_order_warning
 #: model_terms:ir.ui.view,arch_db:odoo_order_warning.order_warning_counter_view
 msgid "Delivery"
-msgstr "Lieferung"
+msgstr "Levering"
 
 #. module: odoo_order_warning
 #: code:addons/odoo_order_warning/models/sale.py:30
 #, python-format
 msgid "It wasn't possible to remove the warning state.There're still some quantities missing in the Deliveries:"
-msgstr "Es war nicht möglich, den Warnzustand zu entfernen. Es fehlen noch einige Mengen in den Lieferungen"
+msgstr "Het was niet mogelijk om de waarschuwingsstatus te verwijderen. Er ontbreken nog enkele hoeveelheden in de leveringen:"
 
 #. module: odoo_order_warning
 #: model:ir.model,name:odoo_order_warning.model_sale_order
 msgid "Sale Order"
-msgstr "Verkaufsauftrag"
+msgstr "Verkooporder"
 
 #. module: odoo_order_warning
 #: model:ir.model,name:odoo_order_warning.model_stock_picking
 msgid "Transfer"
-msgstr "Lieferung vornehmen"
+msgstr "Overplaatsing"
 
 #. module: odoo_order_warning
 #: code:addons/odoo_order_warning/models/sale.py:20
 #, python-format
 msgid "Warning"
-msgstr "Warnung"
+msgstr "Waarschuwing"
 
