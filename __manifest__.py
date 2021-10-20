@@ -10,7 +10,7 @@
     """,
     'author': "Alliantum",
     'website': "https://www.alliantum.com",
-    'version': '12.0.1.0.0',
+    'version': '13.0.1.0.0',
     'license': 'AGPL-3',
     'category': 'Sales',
     'depends': ['base', 'sale', 'sale_stock'],

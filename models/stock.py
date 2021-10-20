@@ -6,7 +6,6 @@ from odoo import models, api, exceptions
 class StockPicking(models.Model):
     _inherit = "stock.picking"
 
-    @api.multi
     def button_validate(self):
         """If there's a block on the parent, it'll take precedence"""
         if self.partner_id and self.partner_id.picking_warn:
@@ -21,7 +20,6 @@ class StockPicking(models.Model):
                     raise exceptions.ValidationError(partner.picking_warn_msg)
         return super(StockPicking, self).button_validate()
 
-    @api.multi
     def check_amounts(self):
         """Checks the amount of product sold and the amount of product being picked from the stock,
         and sets the sale status to `Warning` if is not enough"""
@@ -71,7 +69,6 @@ class StockPicking(models.Model):
 
         return (missing_quants, message_text)
 
-    @api.multi
     def action_cancel(self):
         """Update the sale status when cancelling"""
         for picking in self:
@@ -88,7 +85,6 @@ class StockPicking(models.Model):
             res.check_amounts()
         return res
 
-    @api.multi
     def unlink(self):
         """Update the sale status when deleting"""
         sale_ids = []
