@@ -1,23 +1,12 @@
-# -*- encoding: utf-8 -*-
-
-from odoo import models, api, _
+from odoo import models, fields, _
 from odoo.exceptions import ValidationError
+
 
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
-    @api.model
-    def _setup_fields(self):
-        """Add the `Warning` state to the selection field if doesn't exist"""
-        super(SaleOrder, self)._setup_fields()
-        selection = self._fields['state'].selection
-        exists = False
-        for idx, (state, __) in enumerate(selection):
-            if state == 'warning':
-                exists = True
-        if not exists:
-            selection.append(('warning', _('Warning')))
+    state = fields.Selection(selection_add=[('warning', 'Warning')], ondelete={'warning': lambda recs: recs.write({'state': 'draft'})})
 
     def action_remove_warning(self):
         """Check that there are no missing quantities in order to remove the `Warning` state"""
